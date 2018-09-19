@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-import navigation from './navigation'
+import currentPage from './currentPage'
 
 export default combineReducers({
-  navigation
+  currentPage
 })

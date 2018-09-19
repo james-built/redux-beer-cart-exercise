@@ -1,5 +1,8 @@
-export const actionCreatorName = () => {
+const NAVIGATE = 'NAVIGATE'
+
+export const navigate = target => {
   return {
-    type: 'ACTION_TYPE'
+    type: NAVIGATE,
+    target
   }
 }
