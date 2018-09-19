@@ -1,10 +1,26 @@
 import React from 'react'
 
-// This might need to be turned into a stateful (class-based) component
-const App = () => (
-  <div className='app'>
-    Ready to rock and roll
-  </div>
-)
+// Components
+import Listing from './Listing'
+import Header from './Header'
+import Cart from './Cart'
 
-export default App
+export default class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      target: 'listing'
+    }
+  }
+  render() {
+    return (
+      <div className='app'>
+      <Header />
+      {this.state.target === 'listing'
+      ? <Listing />
+      : <Cart />
+      }
+      </div>
+    )
+  }
+}
